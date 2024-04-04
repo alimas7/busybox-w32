@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: sudo apt-get install --assume-yes gcc make libncurses5-dev libncursesw5-dev gcc-mingw-w64
-      - run: make menuconfig
+      - run: make defconfig
       - run: make -j $(nproc)
       - name: Step 3 - Use the Upload Artifact GitHub Action
         uses: actions/upload-artifact@v2
